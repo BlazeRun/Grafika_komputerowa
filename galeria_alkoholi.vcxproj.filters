@@ -27,10 +27,7 @@
     <ClInclude Include="myCube.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="myTeapot.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="modelLoader.h">
+    <ClInclude Include="model.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,18 +41,15 @@
     <ClCompile Include="shaderprogram.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="modelLoader.cpp">
+    <ClCompile Include="model.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="f_simplest.glsl">
+    <None Include="v_textures.glsl">
       <Filter>Pliki zasobów</Filter>
     </None>
-    <None Include="v_simplest.glsl">
-      <Filter>Pliki zasobów</Filter>
-    </None>
-    <None Include="g_simplest.glsl">
+    <None Include="f_textures.glsl">
       <Filter>Pliki zasobów</Filter>
     </None>
   </ItemGroup>

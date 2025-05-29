@@ -21,21 +21,19 @@
   <ItemGroup>
     <ClInclude Include="constants.h" />
     <ClInclude Include="lodepng.h" />
-    <ClInclude Include="modelLoader.h" />
+    <ClInclude Include="model.h" />
     <ClInclude Include="shaderprogram.h" />
     <ClInclude Include="myCube.h" />
-    <ClInclude Include="myTeapot.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main_file.cpp" />
-    <ClCompile Include="modelLoader.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="shaderprogram.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="f_simplest.glsl" />
-    <None Include="g_simplest.glsl" />
-    <None Include="v_simplest.glsl" />
+    <None Include="f_textures.glsl" />
+    <None Include="v_textures.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
