@@ -1,9 +1,0 @@
-﻿  main_file.cpp
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(174,11): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(175,11): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(179,16): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(180,16): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(182,10): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(183,10): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\main_file.cpp(532,22): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-  galeria_alkoholi.vcxproj -> C:\Users\i.szymalak\Desktop\Grafika\Grafika_komputerowa\build\galeria_alkoholi.exe

@@ -23,7 +23,6 @@
     <ClInclude Include="lodepng.h" />
     <ClInclude Include="model.h" />
     <ClInclude Include="shaderprogram.h" />
-    <ClInclude Include="myCube.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lodepng.cpp" />
@@ -32,6 +31,9 @@
     <ClCompile Include="shaderprogram.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="depth_shader.fs" />
+    <None Include="depth_shader.gs" />
+    <None Include="depth_shader.vs" />
     <None Include="f_textures.glsl" />
     <None Include="v_textures.glsl" />
   </ItemGroup>

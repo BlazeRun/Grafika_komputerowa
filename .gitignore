@@ -1,7 +1,3 @@
-# Ignore x64 and .vs folders in root
-x64/
+# Ignore build and .vs folders in root
 .vs/
-
-# Ignore x64 and .vs folders in gkiw_nst_07b_win
-gkiw_nst_07b_win/x64/
-gkiw_nst_07b_win/.vs/
+build

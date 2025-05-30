@@ -1,49 +1,41 @@
-﻿/*
-Niniejszy program jest wolnym oprogramowaniem; możesz go
-rozprowadzać dalej i / lub modyfikować na warunkach Powszechnej
-Licencji Publicznej GNU, wydanej przez Fundację Wolnego
-Oprogramowania - według wersji 2 tej Licencji lub(według twojego
-wyboru) którejś z późniejszych wersji.
-
-Niniejszy program rozpowszechniany jest z nadzieją, iż będzie on
-użyteczny - jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej
-gwarancji PRZYDATNOśCI HANDLOWEJ albo PRZYDATNOśCI DO OKREśLONYCH
-ZASTOSOWAń.W celu uzyskania bliższych informacji sięgnij do
-Powszechnej Licencji Publicznej GNU.
-
-Z pewnością wraz z niniejszym programem otrzymałeś też egzemplarz
-Powszechnej Licencji Publicznej GNU(GNU General Public License);
-jeśli nie - napisz do Free Software Foundation, Inc., 59 Temple
-Place, Fifth Floor, Boston, MA  02110 - 1301  USA
-*/
-
-
-#ifndef SHADERPROGRAM_H
+﻿#ifndef SHADERPROGRAM_H
 #define SHADERPROGRAM_H
 
-
 #include <GL/glew.h>
-#include "stdio.h"
-
-
+#include <glm/glm.hpp>
 
 class ShaderProgram {
 private:
-	GLuint shaderProgram; //Uchwyt reprezentujący program cieniujacy
-	GLuint vertexShader; //Uchwyt reprezentujący vertex shader
-	GLuint geometryShader; //Uchwyt reprezentujący geometry shader
-	GLuint fragmentShader; //Uchwyt reprezentujący fragment shader
-	char* readFile(const char* fileName); //metoda wczytująca plik tekstowy do tablicy znaków
-	GLuint loadShader(GLenum shaderType,const char* fileName); //Metoda wczytuje i kompiluje shader, a następnie zwraca jego uchwyt
+    GLuint shaderProgram;   // program handle
+    GLuint vertexShader;    // vertex shader handle
+    GLuint geometryShader;  // geometry shader handle
+    GLuint fragmentShader;  // fragment shader handle
+
+    // load text file into null-terminated char*
+    char* readFile(const char* fileName);
+    // compile one shader stage and return its handle
+    GLuint loadShader(GLenum shaderType, const char* fileName);
+
 public:
-	ShaderProgram(const char* vertexShaderFile,const char* geometryShaderFile,const char* fragmentShaderFile);
-	~ShaderProgram();
-	void use(); //Włącza wykorzystywanie programu cieniującego
-	GLuint u(const char* variableName); //Pobiera numer slotu związanego z daną zmienną jednorodną
-	GLuint a(const char* variableName); //Pobiera numer slotu związanego z danym atrybutem
+    // build from VS, optional GS, and FS
+    ShaderProgram(const char* vertexShaderFile,
+        const char* geometryShaderFile,
+        const char* fragmentShaderFile);
+    ~ShaderProgram();
+
+    // use this shader program
+    void use();
+
+    // get locations
+    GLuint u(const char* variableName); // uniform
+    GLuint a(const char* variableName); // attribute
+
+    // --- new convenience setters ---
+    void setInt(const char* name, int value);
+    void setFloat(const char* name, float value);
+    void setVec3(const char* name, const glm::vec3& v);
+    void setMat4(const char* name, const glm::mat4& m);
+    void setMat3(const char* name, const glm::mat3& m);
 };
 
-
-
-
-#endif
+#endif // SHADERPROGRAM_H

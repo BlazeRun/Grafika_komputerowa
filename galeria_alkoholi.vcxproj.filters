@@ -24,9 +24,6 @@
     <ClInclude Include="shaderprogram.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="myCube.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="model.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
@@ -50,6 +47,15 @@
       <Filter>Pliki zasobów</Filter>
     </None>
     <None Include="f_textures.glsl">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="depth_shader.vs">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="depth_shader.fs">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="depth_shader.gs">
       <Filter>Pliki zasobów</Filter>
     </None>
   </ItemGroup>

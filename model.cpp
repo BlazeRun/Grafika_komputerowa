@@ -13,9 +13,9 @@ Model::Model(const std::string& path) {
 void Model::Draw(ShaderProgram* shader) {
     shader->use();
 
-    glActiveTexture(GL_TEXTURE0);                            // activate texture unit 0
-    glBindTexture(GL_TEXTURE_2D, textureID);                 // bind the texture
-    glUniform1i(shader->u("texture0"), 0);                   // tell the shader to use it
+    glActiveTexture(GL_TEXTURE0); // activate texture unit 0
+    glBindTexture(GL_TEXTURE_2D, textureID); // bind the texture
+    glUniform1i(shader->u("texture0"), 0); // tell the shader to use it
 
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
@@ -86,7 +86,7 @@ void Model::loadModel(const std::string& path) {
                 std::cout << "[MODEL] Loading texture from: " << fullPath << std::endl;
                 loadTexture(fullPath);
                 foundTexture = true;
-                break; // tylko pierwsza niepusta tekstura
+                break; // first non empty texture
             }
         }
 
