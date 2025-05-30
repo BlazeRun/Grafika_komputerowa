@@ -13,4 +13,3 @@ Sterowanie:
 Lista efektów upojenia ( efekty utrzymują się 10 sekund po napiciu się z butelki, napicie się z kolejnej resetuje ten licznik ):
 
 - Progresywnie zwiększające się zawroty głowy ( kręcącą się kamera )
-- Na ostatnim czwartym etapie następuje "zgon" postaci urywa się film przez co ekran robi się czarny

@@ -450,56 +450,6 @@ void drawScene(GLFWwindow* window, float angle_x, float angle_y) {
       }
     }
 
-    int focused = getDrinkableInFocus();
-    float crosshairScale = (focused != -1) ? 1.5f : 1.0f;
-
-    // draw crosshair
-    glUseProgram(0);
-    glMatrixMode(GL_PROJECTION);
-    glPushMatrix();
-    glLoadIdentity();
-    glOrtho(0, 800, 0, 600, -1, 1);
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
-    glLoadIdentity();
-
-    glDisable(GL_DEPTH_TEST);
-    glBegin(GL_LINES);
-    glColor3f(0.0f, 1.0f, 0.0f);
-    glVertex2f(400.0f - 5 * crosshairScale, 300.0f); glVertex2f(400.0f + 5 * crosshairScale, 300.0f);
-    glVertex2f(400.0f, 300.0f - 5 * crosshairScale); glVertex2f(400.0f, 300.0f + 5 * crosshairScale);
-    glEnd();
-    glEnable(GL_DEPTH_TEST);
-
-    glPopMatrix();
-    glMatrixMode(GL_PROJECTION);
-    glPopMatrix();
-    glMatrixMode(GL_MODELVIEW);
-
-    // drunken overlay ( make screen black because you fainted, too much alcohol )
-    if (intoxicationLevel >= 4) {
-        glUseProgram(0);
-        glMatrixMode(GL_PROJECTION);
-        glPushMatrix(); glLoadIdentity();
-        glOrtho(0, 800, 0, 600, -1, 1);
-        glMatrixMode(GL_MODELVIEW);
-        glPushMatrix(); glLoadIdentity();
-        glDisable(GL_DEPTH_TEST);
-        glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-        glColor4f(0, 0, 0, 1.0f);
-        glBegin(GL_QUADS);
-        glVertex2f(0, 0); glVertex2f(800, 0);
-        glVertex2f(800, 600); glVertex2f(0, 600);
-        glEnd();
-        glDisable(GL_BLEND);
-        glEnable(GL_DEPTH_TEST);
-        glPopMatrix();
-        glMatrixMode(GL_PROJECTION);
-        glPopMatrix();
-        glMatrixMode(GL_MODELVIEW);
-    }
-
     glfwSwapBuffers(window);
 }
 
